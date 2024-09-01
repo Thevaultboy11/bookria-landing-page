@@ -1,0 +1,144 @@
+---
+import Twitter from "./icons/Twitter.astro";
+import Github from "./icons/Github.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Medium from "./icons/Medium.astro";
+import { Image } from "astro:assets";
+
+interface InterviewCompany {
+  name: string;
+  url: string;
+}
+
+interface Interviews {
+  imageUrl: string;
+  name: string;
+  company: InterviewCompany;
+  summary: string;
+  location: string;
+  twitterUrl?: string;
+  mediumUrl?: string;
+  githubUrl?: string;
+  linkedinUrl?: string;
+}
+
+const interviews: Array<Interviews> = [
+  {
+    imageUrl: "/review1.jpeg",
+    name: "",
+    company: {
+      name: "Source: Instagram",
+      url: "https://danteseraf.gumroad.com/l/masteringfate",
+    },
+    summary:
+      "From the moment I started reading Mastering Fate, I was drawn into a world where ancient wisdom meets personal transformation. Dante Serefino has crafted a work steeped in symbolism and hidden meanings, echoing the profound depth of the Tarot itself. The book seamlessly blends historical references with modern insights, making the art of Tarot feel both timeless and urgently relevant. Serefino's exploration of human destiny isn't just about fortune-telling; it's a powerful commentary on the choices we make and the forces that shape our lives. The forbidden knowledge within these pages resonates with the mysteries of the universe, offering a guide to those brave enough to seek their true path.",
+    location: "",
+  },
+];
+---
+
+<head>
+  <title>
+    What Readers Are Saying About 'Mastering Fate' by Dante Serafino - Unveil the Impact
+  </title>
+  <meta
+    name="description"
+    content="Discover what readers are saying about 'Mastering Fate' by Dante Serafino. Read reviews and explore the profound impact of this forbidden book on personal transformation and Tarot wisdom."
+  />
+  <meta
+    name="keywords"
+    content="Mastering Fate, Dante Serafino, Tarot reviews, reader testimonials, forbidden wisdom, personal transformation, book reviews, Tarot insights, esoteric teachings, mystical literature, spiritual awakening"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="What Readers Are Saying About 'Mastering Fate' by Dante Serafino - Unveil the Impact">
+  <meta property="og:description" content="Explore the profound impact of 'Mastering Fate' by Dante Serafino through reader testimonials. Discover how this forbidden wisdom is transforming lives.">
+  <meta property="og:image" content="/reviews-cover.jpeg">
+  <meta property="og:url" content="https://bookria.co/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://bookria.co/">
+</head>
+
+<div class="bg-white">
+  <div class="max-w-screen-xl mx-auto pt-16 pb-4 px-4">
+    <h1 class="text-3xl leading-9 font-extrabold text-gray-900">
+      What Readers Are Saying About 'Mastering Fate'...
+    </h1>
+    <div class="mt-6 pt-10">
+      {interviews.map((interview) => (
+        <div class="flex-none sm:flex mb-12">
+          <Image
+            class="w-40 h-40 rounded-full mr-8 pb-4"
+            src={interview.imageUrl}
+            alt={`Review by ${interview.name}`}
+            width={160}
+            height={160}
+            loading="lazy"
+          />
+          <div class="text-sm">
+            <p class="text-2xl font-semibold text-gray-900">
+              {interview.name}
+            </p>
+            <p class="text-xl">
+              <a
+                class="underline text-book-gray hover:bg-book-hover transition ease-in-out duration-300"
+                href={interview.company.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {interview.company.name}
+              </a>
+            </p>
+            <p class="text-base pt-4 text-gray-600 mb-1 font-body">
+              {interview.summary}
+            </p>
+            <p class="text-sm italic text-gray-500 font-body">
+              {interview.location}
+            </p>
+            <div class="flex flex-row my-2">
+              {interview.githubUrl && (
+                <a
+                  title="Github Profile"
+                  href={interview.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github />
+                </a>
+              )}
+              {interview.twitterUrl && (
+                <a
+                  title="Twitter Profile"
+                  href={interview.twitterUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Twitter />
+                </a>
+              )}
+              {interview.linkedinUrl && (
+                <a
+                  title="LinkedIn Profile"
+                  href={interview.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin />
+                </a>
+              )}
+              {interview.mediumUrl && (
+                <a
+                  title="Medium Profile"
+                  href={interview.mediumUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Medium />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

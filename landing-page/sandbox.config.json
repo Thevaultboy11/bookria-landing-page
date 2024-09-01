@@ -1,0 +1,59 @@
+{
+  "infiniteLoopProtection": true,
+  "hardReloadOnChange": false,
+  "view": "browser",
+  "template": "node",
+  "container": {
+    "port": 3000,
+    "startScript": "start",
+    "node": "18"
+  },
+  "showAmazonTag": false,
+  "showCountingSell": false,
+  "showBuyAudiobookButton": false,
+  "sections": {
+    "showBuyAudiobook": false,
+    "showDownloadFreeChapter": false,
+    "showAboutAuthor": true
+  },
+  "seo": {
+    "title": "Book 'Mastering Fate' by Dante Serefino",
+    "description": "A guide to Tarot that empowers you to shape your destiny, combining ancient wisdom with practical techniques for self-discovery and decision-making.",
+    "canonical": "https://bookria.co"
+  },
+  "theme": {
+    "color": "#ff04db"
+  },
+  "author": {
+    "name": "Dante Serafino",
+    "email": "contact@bookria.co",
+    "location": "Dante Serafino"
+  },
+  "book": {
+    "title": "Mastering Fate: Unleashing Your Future with Tarot",
+    "isbn": "978-65-89313-54-0",
+    "releaseDate": "2022-03-28",
+    "price": "34.9",
+    "currency": "USD",
+    "buyPhysicalUrl": "https://danteseraf.gumroad.com/l/masteringfate",
+    "buyDigitalUrl": "https://danteseraf.gumroad.com/l/masteringfate"
+  },
+  "sectionPrices": {
+    "priceMain": {
+      "title": "'Mastering Fate' E-Book",
+      "amount": {
+        "decimal": 12.99,
+        "cents": 99
+      },
+      "details": ["85 Pages", "15 Chapters", "Lifetime Updates"],
+      "button": {
+        "label": "Get It Now",
+        "url": "https://danteseraf.gumroad.com/l/masteringfate"
+      },
+      "tagTitle": {
+        "title": "Banned Version",
+        "cssClass": "text-book-gray bg-book-theme"
+      }
+    }
+  }
+}

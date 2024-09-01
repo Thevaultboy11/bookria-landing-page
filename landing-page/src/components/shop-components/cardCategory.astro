@@ -1,0 +1,39 @@
+---
+interface Props {
+  thumb_src: string;
+  title: string;
+  collection: string;
+  classList: string;
+}
+
+const { thumb_src, title, collection, classList, cta } = Astro.props as Props;
+
+const classBody = cta != null ? "flex items-end" : "text-center w-full pt-8";
+---
+
+<a href="#">
+  <div
+    class={`relative h-64 rounded-md flex flex-col items-start mb-4 lg:mb-0 ${classList}`}
+  >
+    <div class="w-full aspect-[4/3]">
+      <div
+        class="absolute inset-0 bg-cover bg-center rounded-md aspect-[4/3]"
+        style={`background-image: url(/cover-mastering-fate.jpeg);`}
+      >
+      </div>
+      <div class={`relative p-4 ${classBody}`}>
+        <div class="mt-10">
+          <p class="text-white font-bold mb-1">{collection}</p>
+          <h4 class="text-white font-extrabold">{title}</h4>
+          {
+            cta && (
+              <a href="#" class="text-white text-sm font-semibold mb-0">
+                See products &#62;
+              </a>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
