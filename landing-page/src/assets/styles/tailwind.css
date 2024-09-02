@@ -5,6 +5,10 @@
 html {
   scroll-behavior: smooth;
 }
+::selection {
+  background-color: #9d4edd; /* Set the background color of the selected text */
+  color: white; /* Set the text color of the selected text */
+}
 
 @layer utilities {
   .bg-page {
