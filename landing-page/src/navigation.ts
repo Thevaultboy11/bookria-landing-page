@@ -31,10 +31,10 @@ export const footerData = {
     {
       title: 'Products',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Team', href: '#' },
+        { text: 'Magnetic Aura', href: '/library/magnetic-aura' },
+        { text: 'Mastering Fate', href: '/library/mastering-fate' },
+        { text: 'Extraterrestrial Secrets', href: '/library/extraterrestrial-secrets' },
+        { text: 'Eternal Communication', href: '/library/eternal-communication' },
       ],
     },
   ],
