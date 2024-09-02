@@ -6,20 +6,20 @@ export const headerData = {
       text: 'Banned Books',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'Magnetic Aura',
+          href: getPermalink('/library/magnetic-aura'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'Mastering Fate',
+          href: getPermalink('/library/mastering-fate'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          text: 'Extraterrestrial Secrets',
+          href: getPermalink('/library/extraterrestrial-secrets'),
         },
         {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'Eternal Communication',
+          href: getPermalink('/library/eternal-communication'),
         },
       ],
     },
@@ -29,7 +29,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Products',
       links: [
         { text: 'Features', href: '#' },
         { text: 'Security', href: '#' },

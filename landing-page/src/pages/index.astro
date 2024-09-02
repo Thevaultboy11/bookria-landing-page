@@ -1,19 +1,23 @@
 ---
-import Layout from "~/layouts/PageLayout.astro";
+import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from "~/components/widgets/Hero.astro";
-import Testimonials from "~/components/widgets/Testimonials.astro";
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 
-import Stats from "~/components/widgets/Stats.astro";
+import Stats from '~/components/widgets/Stats.astro';
 const metadata = {
-  title:
-    "AstroWind — Free template for creating websites with Astro + Tailwind CSS",
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
-import { Image } from "astro:assets";
-import Headline from "~/components/ui/Headline.astro";
-import Content from "~/components/widgets/Content.astro";
-const books = [0, 0, 0, 0];
+import { Image } from 'astro:assets';
+import Headline from '~/components/ui/Headline.astro';
+import Content from '~/components/widgets/Content.astro';
+const books = [
+  { page_url: '/library/magnetic-aura', img_url: '/cover-mastering-fate.jpeg' },
+  { page_url: '/library/mastering-fate', img_url: '/cover-mastering-fate.jpeg' },
+  { page_url: '/library/extraterrestrial-secrets', img_url: '/cover-mastering-fate.jpeg' },
+  { page_url: '/library/eternal-communication', img_url: '/cover-mastering-fate.jpeg' },
+];
 ---
 
 <Layout metadata={metadata}>
@@ -22,31 +26,30 @@ const books = [0, 0, 0, 0];
   <Hero
     actions={[
       {
-        variant: "primary",
-        text: "View Collection",
-        href: "https://github.com/onwidget/astrowind",
-        target: "_blank",
-        icon: "tabler:arrow-down",
+        variant: 'primary',
+        text: 'View Collection',
+
+        target: '_blank',
+        icon: 'tabler:arrow-down',
+        id: 'scroll-button',
       },
     ]}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline"
-        >creating websites with</span
-      >
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + <span
-        class="text-primary">Tailwind CSS</span
+      Free template for <span class="hidden xl:inline">creating websites with</span>
+      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + <span class="text-book-theme"
+        >Tailwind CSS</span
       >
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and
-        production-ready template for Astro 4.0 + .</span
+        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
+        + .</span
       >
 
-      Suitable for Startups, Small Business, SaaS websites, Professional
-      Portfolios, Marketing websites, Landing Pages & Blogs.
+      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
+      Blogs.
     </Fragment>
   </Hero>
 
@@ -54,34 +57,36 @@ const books = [0, 0, 0, 0];
 
   <Stats
     stats={[
-      { title: "Downloads", amount: "132K" },
-      { title: "Stars", amount: "24.8K" },
-      { title: "Forks", amount: "10.3K" },
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
     ]}
   />
   <div class="md:mx-auto w-full max-w-7xl py-12 md:py-20">
-    <Headline
-      title={"Banned Book Library"}
-      subtitle={"Buy the books until they expire"}
-    />
-    <div class="gap-8 w-full grid grid-cols-1 md:grid-cols-4 mb-5">
+    <Headline title={'Banned Book Library'} subtitle={'Buy the books until they expire'} />
+    <div id="books-container" class="gap-8 w-full grid grid-cols-1 md:grid-cols-4 mb-5">
       {
         books.map((item) => (
           <div class="mx-auto md:mx-0 w-2/3 md:w-64  flex flex-col rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6 ">
-            <div>
-              <img
-                class="mx-auto w-60 rounded-md"
-                style="aspect-ratio: 3 / 4;"
-                src="/cover-mastering-fate.jpeg"
-                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
-                alt="Picture showcasing client wins and Success Stories"
-              />
-            </div>
-            <div>
-              <button class="w-full mt-4 flex items-center justify-center border border-transparent text-base leading-6 rounded-md font-semibold text-white bg-book-theme hover:bg-book-hover focus:outline-none transition py-2 duration-300 ease-in-out md:py-1 md:text-lg md:px-10">
-                Buy Now
-              </button>
-            </div>
+            <a href={item.page_url}>
+              <div>
+                <img
+                  class="mx-auto w-60 rounded-md"
+                  style="aspect-ratio: 3 / 4;"
+                  src={item.img_url}
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 432px"
+                  alt="Picture showcasing client wins and Success Stories"
+                />
+              </div>
+              <div>
+                <a
+                  href={item.page_url}
+                  class="w-full mt-4 flex items-center justify-center border border-transparent text-base leading-6 rounded-md font-semibold text-white bg-book-theme hover:bg-book-hover focus:outline-none transition py-2 duration-300 ease-in-out md:py-1 md:text-lg md:px-10"
+                >
+                  Buy Now
+                </a>
+              </div>
+            </a>
           </div>
         ))
       }
@@ -91,41 +96,37 @@ const books = [0, 0, 0, 0];
     isAfterContent
     items={[
       {
-        title: "Time Savings",
+        title: 'Time Savings',
         description:
-          "Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.",
-        icon: "tabler:clock",
+          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
+        icon: 'tabler:clock',
       },
       {
-        title: "Professional Appearance",
+        title: 'Professional Appearance',
         description:
-          "Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.",
-        icon: "tabler:school",
+          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
+        icon: 'tabler:school',
       },
       {
-        title: "Cost-Efficiency",
+        title: 'Cost-Efficiency',
         description:
-          "Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.",
-        icon: "tabler:coin",
+          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
+        icon: 'tabler:coin',
       },
       {
-        title: "Instant Download",
+        title: 'Instant Download',
         description:
-          "Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.",
-        icon: "tabler:file-download",
+          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
+        icon: 'tabler:file-download',
       },
     ]}
     image={{
-      src: "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-      alt: "Benefits Image",
+      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Benefits Image',
     }}
   >
     <Fragment slot="content">
-      <h3
-        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
-      >
-        Benefits
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
     </Fragment>
   </Content>
 
@@ -134,37 +135,37 @@ const books = [0, 0, 0, 0];
     testimonials={[
       {
         testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: "Emily Kennedy",
-        job: "Front-end developer",
+        name: 'Emily Kennedy',
+        job: 'Front-end developer',
         image: {
-          src: "https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80",
-          alt: "Emily Kennedy Image",
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy Image',
         },
       },
       {
         testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: "Sarah Hansen",
-        job: "Photographer",
+        name: 'Sarah Hansen',
+        job: 'Photographer',
         image: {
-          src: "https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-          alt: "Sarah Hansen Image",
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen Image',
         },
       },
       {
         testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: "Mark Wilkinson",
-        job: "Small business owner",
+        name: 'Mark Wilkinson',
+        job: 'Small business owner',
         image: {
-          src: "https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80",
-          alt: "Mark Wilkinson Image",
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
         },
       },
     ]}
     callToAction={{
-      target: "_blank",
-      text: "More testimonials...",
-      href: "https://github.com/onwidget/astrowind",
-      icon: "tabler:chevron-right",
+      target: '_blank',
+      text: 'More testimonials...',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
     }}
   />
   <!-- <CallToAction
@@ -191,3 +192,9 @@ const books = [0, 0, 0, 0];
     </Fragment>
   </CallToAction> -->
 </Layout>
+
+<script>
+  document.getElementById('scroll-button').addEventListener('click', function () {
+    document.getElementById('books-container').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
