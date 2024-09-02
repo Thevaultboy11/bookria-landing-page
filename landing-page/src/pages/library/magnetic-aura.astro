@@ -1,82 +1,16 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import HeroSection from '~/components/nestedPages/HeroSection.astro';
-import { Image } from 'astro:assets';
-import Headline from '~/components/ui/Headline.astro';
-import Content from '~/components/widgets/Content.astro';
-import Prices from '~/components/widgets/Pricing.astro';
+import HeroSection from '~/components/nestedPages/MagneticAura.astro';
+
 const books = [0, 0, 0, 0];
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Magnetic Aura | Bookria',
   ignoreTitleTemplate: true,
 };
-const cta_url = 'https://danteseraf.gumroad.com/l/masteringfate';
+const cta_url = 'https://takeshim.gumroad.com/l/magneticauraebook';
 ---
 
 <Layout metadata={metadata}>
   <HeroSection cta_url={cta_url} />
-  <Content
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 4.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
-      },
-      {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 4.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
-      alt: 'SaaS Businesses Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        SaaS showcase: <br /><span class="text-2xl">Streamlining user experience</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-  <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
-    prices={[
-      {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
-        items: [
-          {
-            description: 'Proin vel laoreet',
-          },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: cta_url,
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-    ]}
-  />
+  
 </Layout>

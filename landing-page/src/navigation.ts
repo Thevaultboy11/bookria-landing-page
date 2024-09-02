@@ -33,18 +33,14 @@ export const footerData = {
       links: [
         { text: 'Magnetic Aura', href: '/library/magnetic-aura' },
         { text: 'Mastering Fate', href: '/library/mastering-fate' },
-        { text: 'Extraterrestrial Secrets', href: '/library/extraterrestrial-secrets' },
-        { text: 'Eternal Communication', href: '/library/eternal-communication' },
+        { text: 'Bridging Afterlife', href: '/library/bridging-afterlife' },
+        { text: 'Anunnaki Unveiled', href: '/library/anunnaki-unveiled' },
       ],
     },
   ],
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
-  socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
   ],
   footNote: `
     

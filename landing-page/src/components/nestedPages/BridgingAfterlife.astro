@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets';
+const { cta_url } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore 'Bridging Afterlife' by Lydia Solara, a guide that helps communicate with deceased loved ones using modern and traditional methods. Discover how to find comfort and closure through spiritual wisdom.">
+    <meta name="keywords" content="Bridging Afterlife, Lydia Solara, communicate with deceased, afterlife, spiritual wisdom, comfort and closure, modern techniques, traditional methods, reconnect with loved ones">
+    <meta property="og:title" content="Bridging Afterlife by Lydia Solara">
+    <meta property="og:description" content="A profound guide by Lydia Solara that explores the connection between the living and the departed, offering practical steps to communicate with deceased loved ones for comfort and closure.">
+    <meta property="og:image" content="/BridgingAfterlife.png">
+    <meta property="og:url" content={cta_url}>
+    <meta property="og:type" content="book">
+    <title>Bridging Afterlife by Lydia Solara</title>
+    <link rel="canonical" href={cta_url}>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main class="mx-auto max-w-7xl px-4 mb-8 mt-12 sm:mt-12 sm:mb-12 sm:px-6 md:mt-32 md:mb-20 xl:mt-23 xl:mb-24">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+        <div class="mb-12 md:max-w-1xl md:mx-auto lg:col-span-8">
+          <h1
+            class="mt-1 text-5xl tracking-tight leading-16 font-extrabold sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl uppercase"
+          >
+            Bridging Afterlife<br class="hidden md:inline" /><span class="underline">by Lydia Solara</span>
+          </h1>
+
+          <p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">
+            Bridging Afterlife by Lydia Solara is a profound guide that explores the mysterious connection between the living and the departed. Delving into age-old practices and modern techniques, this book offers readers practical steps to communicate with deceased loved ones, providing comfort and closure.
+          </p>
+          <p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">
+            Lydia Solara combines spiritual wisdom with compassionate guidance, making it an essential read for those seeking to reconnect with the afterlife and find peace in their grief.
+          </p>
+
+          <p class="mt-3 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2">
+            <b>WARNING: This Book Will Be Removed Soon. Hurry and Get It Now.</b>
+          </p>
+
+          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div>
+              <a
+                href={cta_url}
+                target="_blank"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 rounded-md font-semibold text-white bg-book-theme hover:bg-book-hover focus:outline-none transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10"
+              >
+                Get It Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center"
+        >
+          <a class="book-container" href={cta_url}>
+            <div class="book">
+              <Image
+                src="/BridgingAfterlife.png"
+                width={300}
+                height={600}
+                alt="Bridging Afterlife by Lydia Solara Book Cover"
+                format="avif"
+                loading="eager"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
