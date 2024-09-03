@@ -14,6 +14,10 @@ export const headerData = {
           href: getPermalink('/library/mastering-fate'),
         },
         {
+          text: 'Bridging Afterlife',
+          href: getPermalink('/library/bridging-afterlife'),
+        },
+        {
           text: 'Extraterrestrial Secrets',
           href: getPermalink('/library/extraterrestrial-secrets'),
         },
