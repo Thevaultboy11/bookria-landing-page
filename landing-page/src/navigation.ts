@@ -17,10 +17,6 @@ export const headerData = {
           text: 'Extraterrestrial Secrets',
           href: getPermalink('/library/extraterrestrial-secrets'),
         },
-        {
-          text: 'Eternal Communication',
-          href: getPermalink('/library/eternal-communication'),
-        },
       ],
     },
   ],
