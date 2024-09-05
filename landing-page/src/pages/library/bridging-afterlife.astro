@@ -2,15 +2,41 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroSection from '~/components/nestedPages/BridgingAfterlife.astro';
 
-const books = [0, 0, 0, 0];
 const metadata = {
-  title: 'Bridging Afterlife | Bookria',
+  title: 'Bridging Afterlife eBook | Bookria',
+  description: 'Explore Bridging Afterlife on Bookria, a forbidden book revealing insights into life after death and what lies beyond. Discover the secrets now.',
   ignoreTitleTemplate: true,
 };
+
 const cta_url = 'https://danteseraf.gumroad.com/l/bridgingafterlife';
+
 ---
 
 <Layout metadata={metadata}>
   <HeroSection cta_url={cta_url} />
-  
+
+  <section>
+    <h2>About Bridging Afterlife</h2>
+    <p>Bridging Afterlife uncovers the mysteries of life beyond death, providing readers with a provocative and controversial look at what happens when we cross over. Banned for challenging mainstream beliefs, this book invites you to explore the unknown with groundbreaking revelations.</p>
+    <a href="/library" class="internal-link">Explore more forbidden books on Bookria</a>
+  </section>
+
 </Layout>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Bridging Afterlife",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name"
+  },
+  "description": "Bridging Afterlife delves into the mysteries of life after death, offering a forbidden perspective on what lies beyond.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bookria"
+  }
+}
+</script>

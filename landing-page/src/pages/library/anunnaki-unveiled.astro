@@ -2,15 +2,41 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroSection from '~/components/nestedPages/AnunnakiUnveiled.astro';
 
-const books = [0, 0, 0, 0];
 const metadata = {
-  title: 'Anunnaki Unveiled | Bookria',
+  title: 'Anunnaki Unveiled eBook | Bookria',
+  description: 'Dive into the mysteries of the Anunnaki with Anunnaki Unveiled on Bookria. Explore ancient civilizations, extraterrestrial beings, and hidden history.',
   ignoreTitleTemplate: true,
 };
+
 const cta_url = 'https://danteseraf.gumroad.com/l/anunnakiunveiled';
+
 ---
 
 <Layout metadata={metadata}>
   <HeroSection cta_url={cta_url} />
-  
+
+  <section>
+    <h2>About Anunnaki Unveiled</h2>
+    <p>Anunnaki Unveiled delves deep into the legends of the Anunnaki, ancient beings believed to have influenced humanity's earliest civilizations. From extraterrestrial origins to hidden knowledge, this forbidden book invites you to uncover secrets long kept in the shadows.</p>
+    <a href="/library" class="internal-link">Discover more forbidden knowledge on Bookria</a>
+  </section>
+
 </Layout>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Anunnaki Unveiled",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name"
+  },
+  "description": "Anunnaki Unveiled explores the hidden history of ancient extraterrestrial beings and their impact on early civilizations.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bookria"
+  }
+}
+</script>

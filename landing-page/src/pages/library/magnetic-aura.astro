@@ -2,15 +2,41 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroSection from '~/components/nestedPages/MagneticAura.astro';
 
-const books = [0, 0, 0, 0];
 const metadata = {
   title: 'Magnetic Aura | Bookria',
+  description: 'Discover Magnetic Aura on Bookria, a censored book that explores hidden energy fields and their influence on human perception. Read the banned book now.',
   ignoreTitleTemplate: true,
 };
+
 const cta_url = 'https://takeshim.gumroad.com/l/magneticauraebook';
+
 ---
 
 <Layout metadata={metadata}>
   <HeroSection cta_url={cta_url} />
-  
+
+  <section>
+    <h2>About Magnetic Aura</h2>
+    <p>Magnetic Aura is a captivating book that delves into the hidden forces of energy that influence human perception and interaction. Banned for its controversial content, this book challenges conventional scientific beliefs, providing readers with unique insights into unseen forces.</p>
+    <a href="/library" class="internal-link">Explore more banned books on Bookria</a>
+  </section>
+
 </Layout>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Magnetic Aura",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name"
+  },
+  "description": "Magnetic Aura explores hidden energy fields and their impact on human life, a banned book with thought-provoking insights.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bookria"
+  }
+}
+</script>

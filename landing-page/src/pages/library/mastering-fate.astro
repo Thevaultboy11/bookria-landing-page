@@ -2,15 +2,41 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroSection from '~/components/nestedPages/MasteringFate.astro';
 
-const books = [0, 0, 0, 0];
 const metadata = {
   title: 'Mastering Fate | Bookria',
+  description: 'Explore Mastering Fate, a compelling banned book available on Bookria. Discover hidden truths about destiny and personal power in a world where this book has been censored.',
   ignoreTitleTemplate: true,
 };
+
 const cta_url = 'https://danteseraf.gumroad.com/l/masteringfate';
+
 ---
 
 <Layout metadata={metadata}>
   <HeroSection cta_url={cta_url} />
- 
+
+  <section>
+    <h2>About Mastering Fate</h2>
+    <p>Mastering Fate is a profound and banned book that delves into the secrets of personal power and destiny. Censored for its controversial perspectives, this book offers readers insights into how they can shape their future against societal constraints.</p>
+    <a href="/library" class="internal-link">Browse more banned books in our library</a>
+  </section>
+
 </Layout>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Mastering Fate",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name"
+  },
+  "description": "Mastering Fate is a banned book exploring personal destiny and the power to shape one’s future, challenging traditional beliefs.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bookria"
+  }
+}
+</script>
