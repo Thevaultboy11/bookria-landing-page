@@ -4,44 +4,41 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
-  <loc>https://www.bookria.co/</loc>
+  <loc>https://bookria.co/</loc>
   <lastmod>2024-09-05T17:57:25+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.bookria.co/library/magnetic-aura</loc>
+  <loc>https://bookria.co/library/magnetic-aura</loc>
   <lastmod>2024-09-05T17:57:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bookria.co/library/mastering-fate</loc>
+  <loc>https://bookria.co/library/mastering-fate</loc>
   <lastmod>2024-09-05T17:57:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bookria.co/library/bridging-afterlife</loc>
+  <loc>https://bookria.co/library/bridging-afterlife</loc>
   <lastmod>2024-09-05T17:57:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bookria.co/library/anunnaki-unveiled</loc>
+  <loc>https://bookria.co/library/anunnaki-unveiled</loc>
   <lastmod>2024-09-05T17:57:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bookria.co/terms</loc>
+  <loc>https://bookria.co/terms</loc>
   <lastmod>2024-09-05T17:57:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bookria.co/privacy</loc>
+  <loc>https://bookria.co/privacy</loc>
   <lastmod>2024-09-05T17:57:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>
