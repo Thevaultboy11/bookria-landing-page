@@ -6,6 +6,10 @@ export const headerData = {
       text: 'Banned Books',
       links: [
         {
+          text: 'Magnetic Aura',
+          href: getPermalink('/library/magnetic-aura'),
+        },
+        {
           text: 'Mastering Fate',
           href: getPermalink('/library/mastering-fate'),
         },
@@ -27,6 +31,7 @@ export const footerData = {
     {
       title: 'Products',
       links: [
+        { text: 'Magnetic Aura', href: '/library/magnetic-aura' },
         { text: 'Mastering Fate', href: '/library/mastering-fate' },
         { text: 'Bridging Afterlife', href: '/library/bridging-afterlife' },
         { text: 'Anunnaki Unveiled', href: '/library/anunnaki-unveiled' },

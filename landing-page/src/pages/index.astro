@@ -9,11 +9,11 @@ const metadata = {
   title: 'Worldwide Banned Books | Bookria',
   ignoreTitleTemplate: true,
 };
-import { Image } from 'astro:assets';
 import Headline from '~/components/ui/Headline.astro';
-import Content from '~/components/widgets/Content.astro';
+
 const books = [
   { page_url: '/library/mastering-fate', img_url: '/cover-mastering-fate.jpeg' },
+  { page_url: '/library/magnetic-aura', img_url: '/MagneticAura.png' },
   { page_url: '/library/bridging-afterlife', img_url: '/BridgingAfterlife.png' },
   { page_url: '/library/anunnaki-unveiled', img_url: '/AnunnakiUnveiled.png' },
 ];
@@ -50,7 +50,7 @@ const books = [
   <Stats
     stats={[
       { title: 'Books', amount: '4' },
-      { title: 'Sales', amount: '24.8K' },
+      { title: 'Sales', amount: '21.9K' },
       { title: 'Authors', amount: '4' },
     ]}
   />
@@ -84,37 +84,6 @@ const books = [
       }
     </div>
   </div>
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Broaden Your Perspective',
-        description:
-          'Gain insights into diverse cultures, and viewpoints that challenge mainstream narratives and expand your knowledge.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Support Free Expression',
-        description:
-          'By reading these banned books, you stand up for the freedom of speech and the right to access uncensored literature.',
-        icon: 'tabler:speakerphone',
-      },
-      {
-        title: 'Uncover Hidden Knowledge',
-        description:
-          "Discover powerful, thought-provoking stories that were suppressed or hidden from the public, offering unique knowledge.",
-        icon: 'tabler:coin',
-      }
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
-    </Fragment>
-  </Content>
 
   <Testimonials
     title="What Others Said..."
@@ -124,8 +93,35 @@ const books = [
         name: 'Emily Kennedy',
         job: 'Source: Gumroad',
         image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Maria L.',
+          src: ' ',
+          alt: '',
+        },
+      },
+      {
+        testimonial: `Bookria is a treasure trove of literature that I never knew existed. The stories I've found here are eye-opening and deeply impactful. It's refreshing to read books that aren't afraid to challenge norms!`,
+        name: 'Emily Kennedy',
+        job: 'Source: Gumroad',
+        image: {
+          src: ' ',
+          alt: '',
+        },
+      },
+      {
+        testimonial: `Bookria is a treasure trove of literature that I never knew existed. The stories I've found here are eye-opening and deeply impactful. It's refreshing to read books that aren't afraid to challenge norms!`,
+        name: 'Emily Kennedy',
+        job: 'Source: Gumroad',
+        image: {
+          src: ' ',
+          alt: '',
+        },
+      },
+      {
+        testimonial: `Bookria is a treasure trove of literature that I never knew existed. The stories I've found here are eye-opening and deeply impactful. It's refreshing to read books that aren't afraid to challenge norms!`,
+        name: 'Emily Kennedy',
+        job: 'Source: Gumroad',
+        image: {
+          src: ' ',
+          alt: '',
         },
       },
       {
@@ -133,8 +129,8 @@ const books = [
         name: 'Sarah T.',
         job: 'Source: Email',
         image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
+          src: ' ',
+          alt: '',
         },
       },
       {
@@ -142,8 +138,8 @@ const books = [
         name: 'Jason M.',
         job: 'Source: YouTube',
         image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
+          src: ' ',
+          alt: '',
         },
       },
     ]}
@@ -153,7 +149,9 @@ const books = [
       href: 'https://github.com/onwidget/astrowind',
       icon: 'tabler:chevron-right',
     }}
-  />
+  
+
+/>
   <!-- <CallToAction
     actions={[
       {
@@ -178,6 +176,7 @@ const books = [
     </Fragment>
   </CallToAction> -->
 </Layout>
+
 
 <script>
   document.getElementById('scroll-button').addEventListener('click', function () {
