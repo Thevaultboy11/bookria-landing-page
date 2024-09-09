@@ -18,8 +18,8 @@ export const headerData = {
           href: getPermalink('/library/bridging-afterlife'),
         },
         {
-          text: 'Extraterrestrial Secrets',
-          href: getPermalink('/library/extraterrestrial-secrets'),
+          text: 'Anunnaki Unveiled',
+          href: getPermalink('/library/anunnaki-unveiled'),
         },
       ],
     },
